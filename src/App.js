@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import { Box } from '@chakra-ui/react';
 import './App.css';
+import Banner from './components/banner';
+import Navbar from './components/navbar';
+
+// function StyleColorMode() {
+//   const { toggleColorMode } = useColorMode()
+
+//   const bg = useColorModeValue('red', 'blue')
+//   const color = useColorModeValue('black', 'white')
+
+//   return (
+//     <>
+//       <Box mb={4} bg={bg} color={color}>
+//         This box's style will change based on the color mode.
+//       </Box>
+//       <Button size='sm' onClick={toggleColorMode}>
+//         Toggle Mode
+//       </Button>
+//     </>
+//   )
+//   }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box maxW={['95%', '80%', '75%']} mx='auto' minH='100vh'>
+      <Navbar />
+      <Banner />
+    </Box>
   );
 }
 
